@@ -10,6 +10,7 @@ admin routes
 Route::middleware(['web','admin'])->group(function () {
     
 	#datatables
+    
   Route::get('/adminpannel/users/data',['as'=>'adminpannel.users.data','uses'=>'UsersController@anyData']);
   Route::get('/adminpannel/es/data',['as'=>'adminpannel.es.data','uses'=>'EsController@anyData']);
 
