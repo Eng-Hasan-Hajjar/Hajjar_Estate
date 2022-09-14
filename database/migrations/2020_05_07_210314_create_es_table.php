@@ -14,6 +14,7 @@ class CreateEsTable extends Migration
     public function up()
     {
         Schema::create('es', function (Blueprint $table) {
+            
             $table->bigIncrements('id');
             $table->string('es_name',200);
             $table->string('es_price',20);
@@ -26,6 +27,7 @@ class CreateEsTable extends Migration
             $table->string('es_latitude',50);
             $table->text('es_larg_dis');
             $table->tinyInteger('es_status');
+            
             $table->integer('es_rooms')->default(0);
             $table->string('es_place',200)->default(0);
             $table->string('es_image',300)->default(0);
