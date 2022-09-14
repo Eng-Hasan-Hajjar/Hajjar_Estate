@@ -14,7 +14,9 @@ class CreateEsServicesTable extends Migration
     public function up()
     {
         Schema::create('es_services', function (Blueprint $table) {
+            
             $table->bigIncrements('id');
+            
             $table->integer('service_id');
             $table->integer('es_id');
             $table->boolean('isavailable');
