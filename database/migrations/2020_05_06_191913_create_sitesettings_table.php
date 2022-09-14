@@ -14,11 +14,14 @@ class CreateSitesettingsTable extends Migration
     public function up()
     {
         Schema::create('sitesettings', function (Blueprint $table) {
+            
             $table->bigIncrements('id');
+            
             $table->string('slug');
             $table->string('namesetting');
             $table->text('value');
             $table->tinyInteger('type');
+            
             $table->timestamps();
         });
     }
