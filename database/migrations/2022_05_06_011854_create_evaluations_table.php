@@ -14,7 +14,9 @@ class CreateEvaluationsTable extends Migration
     public function up()
     {
         Schema::create('evaluations', function (Blueprint $table) {
+            
             $table->bigIncrements('id');
+            
             $table->string('comment');
             $table->integer('rate');
             $table->integer('agentimage');
